@@ -6,7 +6,6 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import AllowAny
 
-
 router = DefaultRouter()
 router.register('products', ProductViewSet, basename='product')
 router.register('orders', OrderViewSet, basename='order')
