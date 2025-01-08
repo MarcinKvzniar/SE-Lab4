@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from .serializers import ProductSerializer, CustomerSerializer, OrderSerializer
 from rest_framework.permissions import IsAuthenticated
 from .permissions import IsAdminOrReadOnly
+from django.views.generic import ListView, DetailView, CreateView
+from .forms import ProductForm
 
 class ProductViewSet(viewsets.ModelViewSet):
   permission_classes = [IsAuthenticated, IsAdminOrReadOnly]
