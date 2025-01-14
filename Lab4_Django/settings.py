@@ -83,8 +83,8 @@ DATABASES = {
         'NAME': 'SE_labs',
         'USER': 'Marcin',
         'PASSWORD': 'siema123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
