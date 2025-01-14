@@ -26,7 +26,7 @@ jobs:
         run: docker-compose up --build -d
 
       - name: Execute unit tests
-        run: docker exec $(docker-compose ps -q api) python manage.py test Lab4/tests.py
+        run: docker exec $(docker-compose ps -q api) python manage.py test Lab4.tests.py
 
   docs:
     runs-on: ubuntu-latest
