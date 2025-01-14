@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    ports:
+      - "9999:9999"
+    environment:
+      DATABASE_NAME: "SE_labs"
+      DATABASE_USER: "Marcin"
+      DATABASE_PASSWORD: "siema123"
+      DATABASE_PORT: "5432"
+      DATABASE_HOST: "db"
+    env_file:
+      - .env
+    depends_on:
+      - db
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: "Marcin"
+      POSTGRES_PASSWORD: "siema123"
+      POSTGRES_DB: "SE_labs"
+    ports:
+      - "5432:5432"
